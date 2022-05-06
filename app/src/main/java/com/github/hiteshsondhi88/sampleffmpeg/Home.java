@@ -49,8 +49,8 @@ public class Home extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.inject(this);
-        ObjectGraph.create(new DaggerDependencyModule(this)).inject(this);
-
+//        ObjectGraph.create(new DaggerDependencyModule(this)).inject(this);
+        ffmpeg = FFmpeg.getInstance(getApplicationContext());
         loadFFMpegBinary();
         initUI();
     }
